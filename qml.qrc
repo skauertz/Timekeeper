@@ -1,0 +1,37 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>src/AboutWindow.qml</file>
+        <file>src/AddEditWindow.qml</file>
+        <file>src/AddTimeDialog.qml</file>
+        <file>src/AreYouSure.qml</file>
+        <file>src/EditContextMenu.qml</file>
+        <file>src/EditContextMenuReport.qml</file>
+        <file>src/LoadFileDialog.qml</file>
+        <file>src/Notification.qml</file>
+        <file>src/OptionsMenu.qml</file>
+        <file>src/PasswordEntry.qml</file>
+        <file>src/PasswordIncorrect.qml</file>
+        <file>src/ReallocateDialog.qml</file>
+        <file>src/ReportWindow.qml</file>
+        <file>src/SaveFileDialog.qml</file>
+        <file>src/SettingsWindow.qml</file>
+        <file>src/SortMenu.qml</file>
+        <file>icons/bars-solid.png</file>
+        <file>icons/calendar-alt-regular.png</file>
+        <file>icons/edit-regular.png</file>
+        <file>icons/exclamation-triangle-solid.png</file>
+        <file>icons/eye-regular.png</file>
+        <file>icons/eye-slash-regular.png</file>
+        <file>icons/home-solid.png</file>
+        <file>icons/lock-solid.png</file>
+        <file>icons/minus-square-regular.png</file>
+        <file>icons/plus-circle-solid.png</file>
+        <file>icons/plus-square-regular.png</file>
+        <file>icons/sort-alpha-down-solid.png</file>
+        <file>icons/Timekeeper_SysTray.ico</file>
+        <file>icons/Timekeeper_SysTray.png</file>
+        <file>icons/Timekeeper_SysTray_Alert.png</file>
+        <file>icons/Timekeeper_Logo.png</file>
+    </qresource>
+</RCC>
