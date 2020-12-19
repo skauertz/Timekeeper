@@ -27,39 +27,7 @@ Timekeeper is a simple app to facilitate time tracking over various tasks and pr
 
 Timekeeper is a purely local application. None of your data is saved in the Cloud, and no online account is necessary. All your data is saved locally in a file you specify and can optionally be encrypted.
 
-Timekeeper is currently considered in Beta phase, with a lot of testing already done by the author, and all features considered complete. Nevertheless, <b>bugs are possible</b>, so keep backups of your data files and don’t hesitate to open an issue if something does not work as expected.
-
----
-
-### Windows Installation
-A release package for Windows can be downloaded from the [Release] page.
-
-Timekeeper does not require system-wide installation. All necessary libraries are included in the download. Just extract the archive in a location of your choice and start `Timekeeper.exe` from there.
-
-Timekeeper has been tested on Windows 10 only. Other versions of Windows may work, but are not officially supported.
-
----
-
-### Linux Installation
-A release package for Linux can be downloaded from the [Release] page.
-
-Timekeeper does not require system-wide installation. All necessary libraries are included in the download. Just extract the archive in a location of your choice and start it by launching `Timekeeper.sh` from there. This makes sure Timekeeper uses the Qt libraries provided with the download instead of the system libraries.
-
-Note: Make sure both `Timekeeper` and `Timekeeper.sh` are made executable, or the application won't run.
-
----
-
-### Compiling from source
-Timekeeper has been developed with QtCreator 4.6.2, and the source code repository includes a project file for it. This should allow you to import the project directly into QtCreator. Provided you have an appropriate kit for your platform you should be able to compile it without any problems.
-
-Timekeeper has been developed using Qt 5.11.1. Any Qt version later than this should be compatible.
-
----
-
-### Screenshots
-
-![Main Window](https://www.mediafire.com/convkey/db27/1zvj5hwooze575x6g.jpg)
-![Report Window](https://www.mediafire.com/convkey/b4a1/d5bsfgkvshzogfv6g.jpg)
+Timekeeper is currently considered feature-complete, with a lot of testing already done by the author. Nevertheless, <b>bugs are possible</b>, so don’t hesitate to open an issue if something does not work as expected.
 
 ---
 
@@ -70,6 +38,46 @@ Timekeeper has been developed using Qt 5.11.1. Any Qt version later than this sh
 - Sorting of task list
 - Encryption of time and task data
 - Export of time and task data to CSV format
+
+---
+
+### Screenshots
+
+![Main Window](https://www.mediafire.com/convkey/db27/1zvj5hwooze575x6g.jpg)
+![Report Window](https://www.mediafire.com/convkey/b4a1/d5bsfgkvshzogfv6g.jpg)
+
+---
+
+### Windows Installation
+#### Requirements
+None. All dependencies are included in the executable.
+
+#### Installation
+A release package for Windows can be downloaded from the [Release] page.
+
+Timekeeper does not require system-wide installation. Just extract the archive in a location of your choice and start `Timekeeper.exe` from there.
+
+Timekeeper has been tested on Windows 10 only. Other versions of Windows may work, but are not officially supported.
+
+---
+
+### Linux Installation
+#### Requirements
+* Qt>=5.9.5 (Ubuntu 18.04 or later)
+
+#### Installation
+A release package for Linux can be downloaded from the [Release] page.
+
+Timekeeper does not require system-wide installation. Just extract the archive in a location of your choice and start it by launching `Timekeeper` from there.
+
+Note: Make sure `Timekeeper` is made executable.
+
+---
+
+### Compiling from source
+Timekeeper has been developed with QtCreator 4.6.2, and the source code repository includes a project file for it. This should allow you to import the project directly into QtCreator. Provided you have an appropriate kit for your platform you should be able to compile it without any problems.
+
+Timekeeper has been developed and tested using Qt 5.11.1. Any Qt version later than this should be compatible.
 
 ---
 
@@ -90,6 +98,5 @@ Some features that may be added in a future release are:
 Bug reports are always welcome. If you think you have found a bug, please open an [issue] for it.
 
 
-[User Manual]: /doc/TimekeeperUserGuide.pdf
 [Release]: https://github.com/skauertz/Timekeeper/releases
 [issue]: https://github.com/skauertz/Timekeeper/issues
