@@ -83,7 +83,7 @@ Window {
             y: 110
             height: 40
             width: parent.width
-            text: "Version 1.0-beta1"
+            text: "Version 1.0"
             font.family: "Roboto"
             font.bold: true
             font.pixelSize: 14
@@ -194,7 +194,7 @@ Window {
                 height: 240
                 width: 430
                 textFormat: Text.StyledText
-                text: "Development by Sebastian Kauertz.<br><br>Timekeeper is using <a href=\"https://qt.io\">Qt</a> licensed under LGPL version 3.<br><br>Icons by <a href=\"https://fontawesome.com/license/free\">Fontawesome</a>.<br><br>Cryptography routines from <a href=\"https://rweather.github.io/arduinolibs/index.html\">Arduino Cryptography Library</a>.<br>"
+                text: "Development by Sebastian Kauertz.<br><br>Source code available at <a href=\"https://github.com/skauertz/Timekeeper\">https://github.com/skauertz/Timekeeper</a> <br><br>Timekeeper is using <a href=\"https://qt.io\">Qt</a> licensed under LGPL version 3.<br><br>Icons by <a href=\"https://fontawesome.com/license/free\">Fontawesome</a>.<br><br>Cryptography routines from <a href=\"https://rweather.github.io/arduinolibs/index.html\">Arduino Cryptography Library</a>.<br>"
                 font.family: "Roboto"
                 font.bold: false
                 font.pixelSize: 12
