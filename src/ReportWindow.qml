@@ -823,6 +823,57 @@ Window {
     }
 
 
+    // Days worked
+    Rectangle {
+        id: daysWorked
+        anchors.top: stack.bottom
+        anchors.left: sum.right
+        height: 50
+        width: 200
+        visible: bar.currentIndex > 0
+        color: bg
+
+        Text {
+            height: parent.height
+            width: 100
+            x: 15
+            verticalAlignment: Text.AlignVCenter
+            horizontalAlignment: Text.AlignLeft
+
+            font.bold: true
+            font.family: "Roboto"
+            color: txtColor
+
+            text: "DAYS WORKED:"
+        }
+
+        Text {
+           id: daysWorkedText
+           height: parent.height
+           width: 50
+           x: 100
+           verticalAlignment: Text.AlignVCenter
+           horizontalAlignment: Text.AlignRight
+
+           font.family: "Roboto"
+           font.bold: true
+           text: {
+               if (bar.currentIndex == 1) {
+                   (listView.model.DaysWorkedMonthly);
+               }
+               else if (bar.currentIndex == 2) {
+                   (listView.model.DaysWorkedYearly);
+               }
+               else {
+                   0;
+               }
+           }
+
+           color: txtColor
+        }
+    }
+
+
 ///////  DELEGATES ///////
 
     // Component defining the delegate for tasks

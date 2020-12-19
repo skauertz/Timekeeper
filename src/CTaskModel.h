@@ -111,6 +111,8 @@ public:
     Q_PROPERTY(quint32 TotalSecondsDaily      MEMBER m_totalSecondsDaily      NOTIFY TimeChanged)
     Q_PROPERTY(quint32 TotalSecondsMonthly    MEMBER m_totalSecondsMonthly    NOTIFY TimeChanged)
     Q_PROPERTY(quint32 TotalSecondsYearly     MEMBER m_totalSecondsYearly     NOTIFY TimeChanged)
+    Q_PROPERTY(quint16 DaysWorkedMonthly      MEMBER m_daysWorkedMonthly      NOTIFY TimeChanged)
+    Q_PROPERTY(quint16 DaysWorkedYearly       MEMBER m_daysWorkedYearly       NOTIFY TimeChanged)
     Q_PROPERTY(qint16  settingLastSelectedDate     MEMBER m_settingLastSelectedDate      NOTIFY settingChanged)
     Q_PROPERTY(qint16  settingWeightedReallocation MEMBER m_settingWeightedReallocation  NOTIFY settingChanged)
     Q_PROPERTY(qint16  settingAutosave             MEMBER m_settingAutosave              NOTIFY settingChanged)
@@ -221,6 +223,8 @@ private:
     quint32 m_totalSecondsDaily;         // For report window
     quint32 m_totalSecondsMonthly;       // For report window
     quint32 m_totalSecondsYearly;        // For report window
+    quint16 m_daysWorkedMonthly;         // For report window
+    quint16 m_daysWorkedYearly;          // For report window
 
     QDate   today;
     quint8  thisMonth, thisMonthSaved;

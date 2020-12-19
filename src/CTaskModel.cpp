@@ -1391,7 +1391,7 @@ void CTaskModel::updateTotals()
 void CTaskModel::updateYearlyList(quint16 year)
 {
 // Update hours per year for the given year
-    int i, n;
+    int i, n, m, flag;
     quint32 elapsedSeconds;
     quint16 TotalHours, TotalMinutes, TotalSeconds;
     sTime   yearlyTime;
@@ -1399,6 +1399,7 @@ void CTaskModel::updateYearlyList(quint16 year)
     QMap<QDate, sTime>::const_iterator it;
 
     m_totalSecondsYearly = 0;
+    m_daysWorkedYearly   = 0;
 
     // Iterate over all tasks:
     for (i=0; i<m_tasks.count(); i++) {
@@ -1432,6 +1433,23 @@ void CTaskModel::updateYearlyList(quint16 year)
 
     }
 
+    // Compute number of days worked per month:
+    for (m=1; m<=12; m++) {
+        for (n=1; n<=31; n++) {
+            flag = 0;
+            for (i=0; i<m_tasks.count(); i++) {
+                for (it = m_tasks.at(i).timelog.begin(); it != m_tasks.at(i).timelog.end(); it++) {
+                    if ((it.key().month() == m)&&(it.key().year() == year)&&(it.key().day() == n)) {
+                        if ((it.value().elapsedSeconds > 0)&&(flag == 0)) {
+                            m_daysWorkedYearly += 1;
+                            flag = 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     // Format yearly total:
     TotalHours   =  m_totalSecondsYearly / 3600;
     TotalMinutes = (m_totalSecondsYearly-TotalHours*3600) / 60;
@@ -1447,7 +1465,7 @@ QString CTaskModel::updateMonthlyList(qint8 month, quint16 year)
 // Update hours per month for the given month
 // (month = [1 .. 12])
 // Returns the month to be displayed as QString
-    int i, n, ind;
+    int i, n, ind, flag;
     quint32 elapsedSeconds;
     quint16 TotalHours, TotalMinutes, TotalSeconds;
     sTime   monthlyTime;
@@ -1457,6 +1475,7 @@ QString CTaskModel::updateMonthlyList(qint8 month, quint16 year)
 
 
     m_totalSecondsMonthly = 0;
+    m_daysWorkedMonthly   = 0;
 
     // Iterate over all tasks:
     for (i=0; i<m_tasks.count(); i++) {
@@ -1488,6 +1507,21 @@ QString CTaskModel::updateMonthlyList(qint8 month, quint16 year)
                              m_tasks.at(i).timeDaily, m_tasks.at(i).timeDailyString, monthlyTime, monthlyTimeString, m_tasks.at(i).timeYearly, m_tasks.at(i).timeYearlyString, m_tasks.at(i).timelog });
         dataChanged(index(i, 0), index(i, 0), { HoursMonthlyRole, MinutesMonthlyRole, SecondsMonthlyRole, elapsedSecMonthlyRole, MonthlyStringRole });
 
+    }
+
+    // Compute number of days worked per month:
+    for (n=1; n<=31; n++) {
+        flag = 0;
+        for (i=0; i<m_tasks.count(); i++) {
+            for (it = m_tasks.at(i).timelog.begin(); it != m_tasks.at(i).timelog.end(); it++) {
+                if ((it.key().month() == month)&&(it.key().year() == year)&&(it.key().day() == n)) {
+                    if ((it.value().elapsedSeconds > 0)&&(flag == 0)) {
+                        m_daysWorkedMonthly += 1;
+                        flag = 1;
+                    }
+                }
+            }
+        }
     }
 
     // Format monthly total:
