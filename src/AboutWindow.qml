@@ -150,7 +150,7 @@ Window {
 
         Item {
             id: licenseView
-            visible: stack.depth == 2
+            visible: stack.depth === 2
             height: stack.height
             width: stack.width
 
