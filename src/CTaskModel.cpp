@@ -69,7 +69,7 @@ CTaskModel::CTaskModel(QObject *parent ) : QAbstractListModel(parent)
     }
     m_LogFileNameFull = QDir::currentPath() + "/" + logFile.fileName();
     logOut.setDevice(&logFile);
-    logOut << "Timekeeper v1.0b" << endl;
+    logOut << "Timekeeper v1.1" << endl;
     logOut << QDate::currentDate().toString("dd.MM.yyyy").toUtf8().data() << " - " << QTime::currentTime().toString("HH:mm:ss").toUtf8().data() << ": " << "Starting." << endl;
 
     // Load ini file:

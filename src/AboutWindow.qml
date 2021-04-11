@@ -83,7 +83,7 @@ Window {
             y: 110
             height: 40
             width: parent.width
-            text: "Version 1.0"
+            text: "Version 1.1"
             font.family: "Roboto"
             font.bold: true
             font.pixelSize: 14
