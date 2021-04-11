@@ -1349,7 +1349,7 @@ void CTaskModel::updateTotals()
             if (it.key() == QDate::currentDate()) {
                 totalTimeToday.elapsedSeconds += it.value().elapsedSeconds;
             }
-            if (it.key().month() == QDate::currentDate().month()) {
+            if ((it.key().month() == QDate::currentDate().month())&&(it.key().year() == QDate::currentDate().year())) {
                 totalTimeThisMonth.elapsedSeconds += it.value().elapsedSeconds;
             }
             if (it.key().year() == QDate::currentDate().year()) {
